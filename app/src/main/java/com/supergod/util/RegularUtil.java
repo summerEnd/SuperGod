@@ -53,6 +53,6 @@ public class RegularUtil {
     }
 
     public boolean matches(String regular, String input) {
-        return regular.matches(input);
+        return input.matches(regular);
     }
 }

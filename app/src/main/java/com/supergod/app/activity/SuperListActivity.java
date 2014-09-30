@@ -37,8 +37,8 @@ public class SuperListActivity extends ListActivity implements AdapterView.OnIte
         this.fileName = fileName;
         this.data = data;
         if (data != null) {
-            FileUtil util = new FileUtil();
-            List temp = (List) util.readCache(this, fileName);
+            FileUtil util = new FileUtil(this);
+            List temp = (List) util.readCache(fileName);
             data.addAll(data);
             BaseAdapter adapter=getAdapter();
             if (adapter!=null)adapter.notifyDataSetChanged();
@@ -48,7 +48,7 @@ public class SuperListActivity extends ListActivity implements AdapterView.OnIte
     @Override
     protected void onStop() {
         super.onStop();
-        if (data!=null)new FileUtil().saveCache(getApplicationContext(),fileName,data);
+        if (data!=null)new FileUtil(this).saveCache(fileName,data);
     }
 
     protected BaseAdapter getAdapter(){

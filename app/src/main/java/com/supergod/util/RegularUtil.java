@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  * Created by acer on 2014/9/30.
  */
 public class RegularUtil {
-    public class Regular {
+    public static class Regular {
         /**
          * 手机号
          */
@@ -52,18 +52,7 @@ public class RegularUtil {
         public static final String PATTERN_abc = "^[a-z]+$";
     }
 
-    private String pattern;
-    private String input;
-
-    /**
-     * @param pattern 见Regular
-     */
-    public RegularUtil(String pattern, String input) {
-        this.pattern = pattern;
-        this.input = input;
-    }
-
-    public boolean matches() {
-        return pattern.matches(input);
+    public boolean matches(String regular, String input) {
+        return regular.matches(input);
     }
 }

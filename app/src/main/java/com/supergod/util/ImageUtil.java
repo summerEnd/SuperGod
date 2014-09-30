@@ -108,7 +108,6 @@ public class ImageUtil {
      * @return
      */
     public static Bitmap roundBitmap(Bitmap src, int radius) {
-
         int src_w = src.getWidth();
         int src_h = src.getHeight();
         int result_length = radius * 2;

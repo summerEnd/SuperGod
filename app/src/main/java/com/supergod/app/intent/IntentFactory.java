@@ -25,6 +25,8 @@ public class IntentFactory {
         intent.putExtra("aspectY", 400);
         intent.putExtra("outputX", 640);
         intent.putExtra("outputY", 400);
+//        intent.putExtra("output", Uri.fromFile(tempFile));// 保存到原文件
+//        intent.putExtra("outputFormat", "JPEG");// 返回格式
         intent.putExtra("return-data", true);
         return intent;
     }
